@@ -2,6 +2,8 @@ const headerCityButton = document.querySelector('.header__city-button');
 
 headerCityButton.textContent = localStorage.getItem('lomoda-location') || 'Ваш город, а?';
 
+// Окно указания города
+
 headerCityButton.addEventListener('click', () => {
   const city = prompt('Укажите Ваш город');
   headerCityButton.textContent = city;
@@ -58,6 +60,8 @@ cartOverlay.addEventListener('click', event => {
     cartModalClose();
   }
 })
+
+// Закрытие модалки по клавише Escape
 
 document.addEventListener('keydown', e => {
   if (cartOverlay.classList.contains('cart-overlay-open') && e.code === "Escape") {
