@@ -58,3 +58,10 @@ cartOverlay.addEventListener('click', event => {
     cartModalClose();
   }
 })
+
+document.addEventListener('keydown', e => {
+  if (cartOverlay.classList.contains('cart-overlay-open') && e.code === "Escape") {
+    console.log(cartOverlay.classList.contains('cart-overlay-open'));
+    cartModalClose();
+  }
+})
