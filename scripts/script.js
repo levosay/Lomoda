@@ -12,11 +12,18 @@ headerCityButton.addEventListener('click', () => {
 // Блокировка скролла
 
 const disableScroll = () => {
-  document.body.style.overflow = 'hidden';
+  const widthScroll = window.innerWidth - document.body.offsetWidth;
+  console.log(widthScroll);
+  document.body.style.cssText = `
+    overflow: hidden;
+    padding-right: ${widthScroll}px;
+  `;
 }
 
 const enableScroll = () => {
-  document.body.style.overflow = 'auto';
+  document.body.style.cssText = `
+    overflow: auto;
+  `
 }
 
 // Модальное окно
